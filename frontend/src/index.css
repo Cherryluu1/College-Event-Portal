@@ -1,0 +1,104 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ================= SMOOTH TRANSITIONS ================= */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border-radius: 10px;
+}
+
+/* ================= BACKGROUND GLOW ================= */
+body::before {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: #ff8a00;
+  filter: blur(150px);
+  top: -100px;
+  left: -100px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: #e52e71;
+  filter: blur(150px);
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  opacity: 0.8;
+}
+
+/* ================= LINKS ================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar-logo {
+    font-size: 14px;
+  }
+
+  .menu a {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .main {
+    margin-left: 60px;
+  }
+}
+}
