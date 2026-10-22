@@ -1,15 +1,17 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 
-import userRoutes from "./routes/userRoutes.js";
-import eventRoutes from "./routes/eventRoutes.js";
+import userRoutes from "./routes/userroutes.js";
+import eventRoutes from "./routes/eventroutes.js";
 
 dotenv.config();
 
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 // ✅ FIXED MongoDB Connection (NO OPTIONS)

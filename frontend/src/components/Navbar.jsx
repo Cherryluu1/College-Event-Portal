@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css"; // make sure path is correct
 
 const Navbar = () => {
@@ -7,12 +7,12 @@ const Navbar = () => {
       <div className="logo">⚡ EventHub</div>
 
       <div className="nav-links">
-        <a href="/">Home</a>
-        <a href="/events">Events</a>
-        <a href="/create">Create</a>
-        <a href="/myevents">My Events</a>
-        <a href="/notifications">Notifications</a>
-        <a href="/login">Login</a>
+        <Link to="/">Home</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/create">Create</Link>
+        <Link to="/myevents">My Events</Link>
+        <Link to="/notifications">Notifications</Link>
+        <Link to="/login">Login</Link>
       </div>
     </nav>
   );
